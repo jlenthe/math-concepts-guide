@@ -9,6 +9,7 @@ set -eu  # Exit on error. Treat unset variables as errors.
 
 mkdir -p "$OUT_DIR"
 cp "$SRC_DIR"/*.tex "$OUT_DIR/"
+cp -r "$SRC_DIR"/images "$OUT_DIR/"
 
 # Run make4ht inside the output directory
 (
