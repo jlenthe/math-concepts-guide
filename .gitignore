@@ -1,0 +1,74 @@
+# Custom things to ignore
+out
+
+# The rest of the file is generic things to ignore
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Emacs
+*~
+.emacs~
+
+# Vim
+.swp
+.swo
+.vim/
+
+# IntelliJ IDEA
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+nbproject/
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+
+# Compiled object files
+*.o
+*.a
+*.so
+
+# Logs and temporary files
+*.log
+*.temp
+*.bak
+*.swp
+
+# Git files
+.git/index
+.git/rebase-apply/
+.git/rebase-merge/
+.git/mergetool/
+.git/lfs/
+.gitmodules

@@ -1,0 +1,125 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{sectsty}
+\usepackage{fontawesome5}
+\usepackage[most]{tcolorbox}
+\usepackage[margin=1.5in]{geometry}
+
+\definecolor{darkbg}{HTML}{2d3670}
+\definecolor{lightblue}{HTML}{e8ebff}
+
+% Inject FontAwesome CSS for HTML output
+\ifdefined\HCode
+  \AtBeginDocument{%
+    \HCode{%
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">%
+    }%
+  }
+\fi
+
+\newcommand{\iconBookOpen}{
+  \ifdefined\HCode
+    \HCode{<i class="fas fa-book-open" style="color:white;"></i>}
+  \else
+    \faBookOpen
+  \fi
+}
+
+\newcommand{\iconLightbulb}{
+  \ifdefined\HCode
+    \HCode{<i class="fas fa-lightbulb" style="color:white;"></i>}
+  \else
+    \faLightbulb
+  \fi
+}
+
+\newcommand{\iconExclamationTriangle}{
+  \ifdefined\HCode
+    \HCode{<i class="fas fa-exclamation-triangle" style="color:white;"></i>}
+  \else
+    \faExclamationTriangle
+  \fi
+}
+
+% Define custom boxes for definitions, advanced topics, etc
+\tcbuselibrary{theorems}
+\newtcbtheorem[number within=section]{definition}{\iconBookOpen\hspace{0.5em} Definition}%
+{
+  colframe=darkbg,
+  colback=lightblue, 
+  colbacktitle=darkbg,
+  coltitle=white,
+  fonttitle=\sffamily\bfseries,
+  title filled, 
+}{def}
+
+\newtcolorbox{advancedTopic}{
+  colback=gray!10!white,
+  colframe=gray!80!black,
+  title=\iconLightbulb\hspace{0.5em} Advanced Topic,
+  fonttitle=\sffamily\bfseries,
+}
+
+\newtcolorbox{warning}{
+  colback=orange!5!white,
+  colframe=orange!90!white,
+  title=\iconExclamationTriangle\hspace{0.5em} Warning,
+  fonttitle=\sffamily\bfseries,
+}
+
+% Cusomtize fonts
+\allsectionsfont{\sffamily\textbf}
+
+% Title page
+\title{\sffamily\textbf{The Guide to Basic Mathematical Concepts}}
+\author{\sffamily Your Name}
+\date{Version 0.0.1 \quad \today}
+
+\begin{document}
+\maketitle
+
+\vfill
+\begin{warning}
+  This is a pre-release draft and has not yet been verified for accuracy.
+  If you find any errors or have suggestions for improvement, please post 
+  an issue on the GitHub repository at
+  \url{https://www.github.com/yourusername/guide-to-math}.
+\end{warning}
+\begin{center}
+    {\small This work is licensed under \textbf{CC BY-NC-SA 4.0}.\\
+    To view a copy of this license, visit \texttt{https://creativecommons.org/licenses/by-nc-sa/4.0/}.}
+\end{center}
+
+\newpage
+\tableofcontents
+\newpage
+
+We believe that mathematics is a powerful language that everyday people can 
+use to express and communicate ideas with far greater precision than can be 
+attained with natural language alone. This document provides a reference for 
+basic mathematical notation and definitions. It is intended to be accessible 
+to non-experts and to serve as a quick reference. Sets, relations, and 
+functions are covered in this document.
+
+
+% Main content sections
+\input{section-1-sets}
+\input{section-2-tuples}
+\input{section-3-set-inclusion}
+\input{section-4-set-operations}
+\input{section-5-relations}
+\input{section-6-functions}
+% Uncomment each of the following as the sections become available
+% \input{section-7-logic}
+% \input{section-8-numbers}
+
+\end{document}

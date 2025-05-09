@@ -1,0 +1,90 @@
+\section{Set Operations}
+
+Set operations are ways that two sets can be combined into a new set. The 
+foundational set operations are union, intersection, and difference. Union 
+combines all the elements from both sets. Intersection results in only the
+elements common to both sets. And difference takes the elements from one
+set away from another set.
+
+\begin{definition}{Union}{union}
+  The \textbf{union} of two sets \( A \) and \( B \) is the set of all elements 
+  that are in either \( A \) or \( B \) or both. This is denoted by \( A \cup B \).
+\end{definition}
+
+Union examples:
+\begin{itemize}
+  \item \( A = \{ 1, 2, 3 \} \) and \( B = \{ 3, 4, 5 \} \), then \( A \cup B = \{ 1, 2, 3, 4, 5 \} \).
+  \item \( A = \{ x, y, z \} \) and \( B = \{ a, b, c \} \), then \( A \cup B = \{ x, y, z, a, b, c \} \).
+  \item \( A = \{ \text{Apple}, \text{Orange} \} \) and \( B = \{ \text{Banana}, \text{Grape} \} \), then
+  \( A \cup B = \{ \text{Apple}, \text{Orange}, \text{Banana}, \text{Grape} \} \).
+  \item \( A = \{ x \in \mathbb{R} \mid x < -10 \} \) and \( B = \{ x \in \mathbb{R} \mid x > 10 \} \), then
+  \( A \cup B = \{ x \in \mathbb{R} \mid x < -10 \text{ or } x > 10 \} \).
+\end{itemize}
+
+\begin{definition}{Intersection}{intersection}
+  The \textbf{intersection} of two sets \( A \) and \( B \) is the set of all 
+  elements that are in both \( A \) and \( B \). This is denoted by \( A \cap B \).
+\end{definition}
+
+Intersection examples:
+\begin{itemize}
+  \item \( A = \{ 1, 2, 3 \} \) and \( B = \{ 3, 4, 5 \} \), then \( A \cap B = \{ 3 \} \).
+  \item \( A = \{ x, y, z \} \) and \( B = \{ a, b, c \} \), then \( A \cap B = \emptyset \).
+  \item \( A = \{ \text{Apple}, \text{Orange} \} \) and \( B = \{ \text{Banana}, \text{Orange}, \text{Grape} \} \), then
+  \( A \cap B = \{ \text{Orange} \} \).
+  \item \( A = \{ x \in \mathbb{R} \mid x < 10 \} \) and \( B = \{ x \in \mathbb{R} \mid x > 5 \} \), then
+  \( A \cap B = \{ x \in \mathbb{R} \mid 5 < x < 10 \} \).
+\end{itemize}
+
+\begin{definition}{Difference}{difference}
+  The \textbf{difference} of two sets \( A \) and \( B \) is the set of all 
+  elements that are in \( A \) but not in \( B \). This is denoted by \( A - B \).
+\end{definition}
+
+The following table shows the definition of the set operations using set builder notation.
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{1in} p{3in}}
+    \toprule
+    \textbf{Set Operation} & \textbf{Definition in Set Builder Notation} \\
+    \midrule
+    Union & \( A \cup B = \{ x \mid x \in A \text{ or } x \in B \} \) \\
+    Intersection & \( A \cap B = \{ x \mid x \in A \text{ and } x \in B \} \) \\
+    Difference & \( A - B = \{ x \mid x \in A \text{ and } x \notin B \} \) \\
+    \bottomrule
+  \end{tabular}
+  \caption{Set Operations in Set Builder Notation}
+\end{table}
+
+The cardinality of the power set of a set \( A \) is \( 2^{|A|} \).
+
+\begin{definition}{Cartesian Product}{cartesianProduct}
+  The \textbf{Cartesian product} of two sets \( A \) and \( B \) is the set of all 
+  ordered pairs \( (a, b) \) where \( a \in A \) and \( b \in B \). This is denoted by 
+  \( A \times B \).
+  \medskip
+  When a set is taken in a Cartesian product with itself, exponential notation is used:
+  \begin{align*}
+    A^2 &= A \times A \\
+    A^3 &= A \times A \times A \\
+    &\vdots \\
+    A^n &= A \times A \times \ldots \times A
+  \end{align*}
+\end{definition}
+Cartesian product examples:
+\begin{itemize}
+  \item \( A = \{ 1, 2 \} \) and \( B = \{ 3, 4 \} \), then 
+    \( A \times B = \{ (1, 3), (1, 4), (2, 3), (2, 4) \} \).
+  \item \( C = \{ x, y \} \) and \( D = \{ a, b, c \} \), 
+    then \( C \times D = \{ (x, a), (x, b), (x, c), (y, a), (y, b), (y, c) \} \).
+  \item \( E = \{ \text{Apple}, \text{Orange} \} \) 
+     and \( F = \{ 1, 2 \} \), then \\
+     \( E \times F = \{ (\text{Apple}, 1), (\text{Apple}, 2), (\text{Orange}, 1), (\text{Orange}, 2) \} \).
+  \item \( G = \{ 1, 2 \} \) and \( H = \{ x, y, z \} \), then \( G \times H = \{ (1, x), (1, y), (1, z), (2, x), (2, y), (2, z) \} \).
+\end{itemize}
+
+Looking at a very common Cartesian product, \( \mathbb{R}^2 \), we can precisely describe it
+as 
+\[ 
+  \mathbb{R}^2 = \mathbb{R} \times \mathbb{R} = \{ (x, y) \mid x, y \in \mathbb{R} \} 
+\].

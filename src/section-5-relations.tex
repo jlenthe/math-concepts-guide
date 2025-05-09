@@ -1,0 +1,64 @@
+\section{Relations}
+Relations are used to describe how elements of various sets 
+are related to each other. For example, comparisons of numbers such as 
+\( a < b \) can be defined as relations.
+
+\begin{definition}{Relation}{relation}
+  A \textbf{relation} on sets \( A \) and \( B \) is any subset of the 
+  Cartesian product \( A \times B \).  
+\end{definition}
+
+Relation examples:
+\begin{itemize}
+  \item The less-than relation on \( \mathbb{R} \) may be defined as:
+    \[
+      \{ (x, y) \in \mathbb{R} \times \mathbb{R} \mid x < y \}
+    \]
+  \item The integer-squared relation on \( \mathbb{Z} \) may be defined as:
+    \[
+      \{ (x, y) \in \mathbb{Z} \times \mathbb{Z} \mid y = x^2 \}
+    \]
+  \item The natural square-root relation is a relation from \( \mathbb{N} \) to \( \mathbb{R} \) 
+  (i.e. a subset of \( \mathbb{N} \times \mathbb{R} \)) and may be defined as:
+    \[
+      \{ (x, y) \in \mathbb{N} \times \mathbb{R} \mid y = +\sqrt{x} \}
+    \]
+\end{itemize}
+
+Relations often have special properties that are useful to identify.
+
+\begin{definition}{Reflexive}{reflexive}
+  A relation \( R \) on set \( A \) is \textbf{reflexive} if for all \( a \in A \), \( (a, a) \in R \).
+\end{definition}
+\begin{definition}{Irreflexive}{irreflexive}
+  A relation \( R \) on set \( A \) is \textbf{irreflexive} if for all \( a \in A \), \( (a, a) \notin R \).
+\end{definition}
+\begin{definition}{Symmetric}{symmetric}
+  A relation \( R \) on set \( A \) is \textbf{symmetric} if for all \( a, b \in A \), if \( (a, b) \in R \) then 
+  \( (b, a) \in R \).
+\end{definition}
+\begin{definition}{Transitive}{transitive}
+  A relation \( R \) on set \( A \) is \textbf{transitive} if for all \( a, b, c \in A \), if \( (a, b) \in R \) and 
+  \( (b, c) \in R \) then \( (a, c) \in R \).
+\end{definition}
+\begin{definition}{Equivalence Relation}{equivalence-relation}
+  A relation \( R \) is an \textbf{equivalence relation} if it is reflexive, symmetric, and transitive.
+\end{definition}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{2in} p{3in}}
+  \toprule
+  \textbf{Comparison Relation} & \textbf{Properties} \\
+  \midrule
+  \( < \) (less than) & transitive \\
+  \( \leq \) (less than or equal to) & reflexive, transitive \\
+  \( > \) (greater than) & transitive \\
+  \( \geq \) (greater than or equal to) & reflexive, transitive \\
+  \( = \) (equal) & reflexive, symmetric, transitive \\
+  \( \neq \) (not equal) & irreflexive, symmetric \\
+  \bottomrule
+  \end{tabular}
+  \caption{Properties of Number Comparisons}
+\end{table}
+

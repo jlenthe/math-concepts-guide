@@ -1,0 +1,57 @@
+\section{Set Inclusion}
+Subsets and supersets describe the relationship between sets when one set is contained in 
+another set.
+
+\begin{definition}{Subset}{subset}
+  A set \( A \) is a \textbf{subset} of a set \( B \) if every element of 
+  \( A \) is also an element of \( B \).  This is denoted by \( A \subseteq B \).
+\end{definition}
+
+\begin{definition}
+    {Superset}{superset}
+    A set \( A \) is a \textbf{superset} of a set \( B \) if every element of 
+    \( B \) is also an element of \( A \). This is denoted by \( A \supseteq B \).
+\end{definition}
+
+Key notes about subsets and supersets:
+\begin{itemize}
+  \item Every set is a subset of itself, \( A \subseteq A \).
+  \item Every set is a superset of itself, \( A \supseteq A \).
+  \item The empty set is a subset of every set, \( \emptyset \subseteq A \).
+  \item Every set is a superset of the empty set, \( A \supseteq \emptyset \).
+\end{itemize}
+  
+
+\begin{definition}{Proper Subset}{properSubset}
+  A set \( A \) is a \textbf{proper subset} of a set \( B \) if every element of 
+  \( A \) is also an element of \( B \) and \( A \neq B \). This is denoted by 
+  \( A \subset B \).
+\end{definition}
+
+\begin{definition}
+    {Proper Superset}{properSuperset}
+    A set \( A \) is a \textbf{proper superset} of a set \( B \) if every element of 
+    \( B \) is also an element of \( A \) and \( A \neq B \). This is denoted by 
+    \( A \supset B \).
+\end{definition}
+
+When we intuitively think of subsets and supersets, we think of one set being
+contained in another set. That intuition corresponds to the concept of \emph{proper}
+subsets and \emph{proper} supersets, since formally a set is a subset and
+superset of itself.
+
+\begin{definition}{Power Set}{powerSet}
+  The \textbf{power set} of a set \( A \) is the set of all possible subsets of \( A \). 
+  This is denoted by \( \mathcal{P}(A) \).
+\end{definition}
+
+Power set examples:
+\begin{itemize}
+  \item \( A = \{ 1, 2 \} \), then \( \mathcal{P}(A) = \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 1, 2 \} \} \).
+  \item \( B = \{ x, y, z \} \), then \( \mathcal{P}(A) = \{ \emptyset, \{ x \}, \{ y \}, \{ z \}, 
+  \{ x, y \}, \{ x, z \}, \{ y, z \}, \{ x, y, z \} \} \).
+  \item \( C = \{ \text{Apple}, \text{Orange} \} \), then \( \mathcal{P}(A) = \{ \emptyset,
+  \{ \text{Apple} \}, \{ \text{Orange} \}, \{ \text{Apple}, \text{Orange} \} \} \).
+  \item \( D = \{ 1, 2, 3 \} \), then \( \mathcal{P}(A) = \{ \emptyset, \{ 1 \}, \{ 2 \},
+  \{ 3 \}, \{ 1, 2 \}, \{ 1, 3 \}, \{ 2, 3 \}, \{ 1, 2, 3 \} \} \).
+\end{itemize}
