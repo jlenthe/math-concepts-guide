@@ -13,8 +13,7 @@ definitions, and notation that is:
 
 ## Accessing the Guide
 
-**TODO**: Once the guide is published on the internet, links will be added
-here.
+Currently builds of the PDF file may be downloaded from: https://github.com/jlenthe/math-concepts-guide/releases
 
 ## Scope of the Project
 
