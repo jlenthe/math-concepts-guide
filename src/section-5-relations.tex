@@ -1,11 +1,11 @@
 \section{Relations}
-Relations are used to describe how elements of various sets 
-are related to each other. For example, comparisons of numbers such as 
+Relations are used to describe how elements of various sets
+are related to each other. For example, comparisons of numbers such as
 \( a < b \) can be defined as relations.
 
 \begin{definition}{Relation}{relation}
-  A \textbf{relation} on sets \( A \) and \( B \) is any subset of the 
-  Cartesian product \( A \times B \).  
+  A \textbf{relation} on sets \( A \) and \( B \) is any subset of the
+  Cartesian product \( A \times B \).
 \end{definition}
 
 Relation examples:
@@ -18,7 +18,7 @@ Relation examples:
     \[
       \{ (x, y) \in \mathbb{Z} \times \mathbb{Z} \mid y = x^2 \}
     \]
-  \item The natural square-root relation is a relation from \( \mathbb{N} \) to \( \mathbb{R} \) 
+  \item The natural square-root relation is a relation from \( \mathbb{N} \) to \( \mathbb{R} \)
   (i.e. a subset of \( \mathbb{N} \times \mathbb{R} \)) and may be defined as:
     \[
       \{ (x, y) \in \mathbb{N} \times \mathbb{R} \mid y = +\sqrt{x} \}
@@ -30,17 +30,30 @@ Relations often have special properties that are useful to identify.
 \begin{definition}{Reflexive}{reflexive}
   A relation \( R \) on set \( A \) is \textbf{reflexive} if for all \( a \in A \), \( (a, a) \in R \).
 \end{definition}
+
 \begin{definition}{Irreflexive}{irreflexive}
   A relation \( R \) on set \( A \) is \textbf{irreflexive} if for all \( a \in A \), \( (a, a) \notin R \).
 \end{definition}
+
+A reflexive relation is one where every element is related to itself. An irreflexive relation is one where
+no element is related to itself. A relation that is neither reflexive nor irreflexive has some elements
+that are related to themselves and some that are not.
+
 \begin{definition}{Symmetric}{symmetric}
-  A relation \( R \) on set \( A \) is \textbf{symmetric} if for all \( a, b \in A \), if \( (a, b) \in R \) then 
+  A relation \( R \) on set \( A \) is \textbf{symmetric} if for all \( a, b \in A \), if \( (a, b) \in R \) then
   \( (b, a) \in R \).
 \end{definition}
+
+A symmetric relation is one where the relation has no sense of direction. It indicates that two elements are
+intrinsically mutually related to each other in some way.
+
 \begin{definition}{Transitive}{transitive}
-  A relation \( R \) on set \( A \) is \textbf{transitive} if for all \( a, b, c \in A \), if \( (a, b) \in R \) and 
+  A relation \( R \) on set \( A \) is \textbf{transitive} if for all \( a, b, c \in A \), if \( (a, b) \in R \) and
   \( (b, c) \in R \) then \( (a, c) \in R \).
 \end{definition}
+
+
+
 \begin{definition}{Equivalence Relation}{equivalence-relation}
   A relation \( R \) is an \textbf{equivalence relation} if it is reflexive, symmetric, and transitive.
 \end{definition}
@@ -51,9 +64,9 @@ Relations often have special properties that are useful to identify.
   \toprule
   \textbf{Comparison Relation} & \textbf{Properties} \\
   \midrule
-  \( < \) (less than) & transitive \\
+  \( < \) (less than) & transitive, irreflexive \\
   \( \leq \) (less than or equal to) & reflexive, transitive \\
-  \( > \) (greater than) & transitive \\
+  \( > \) (greater than) & transitive, irreflexive \\
   \( \geq \) (greater than or equal to) & reflexive, transitive \\
   \( = \) (equal) & reflexive, symmetric, transitive \\
   \( \neq \) (not equal) & irreflexive, symmetric \\
