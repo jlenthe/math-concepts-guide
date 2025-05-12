@@ -1,2 +1,126 @@
 \section{Logic}
-TODO
+
+Mathematical logic gives us a way to express statements involving
+strictly true and false values.
+
+\begin{definition}{Propositional Variable}{propositionalVariable}
+  A \textbf{propositional variable} is a variable with a value from the set
+  \( \mathbb{B} = \{ \text{True}, \text{False} \} \). A propositional variable
+  is sometimes called a Boolean variable.
+\end{definition}
+
+\begin{definition}{Proposition}{proposition}
+  A \textbf{proposition} is a statement that is either true or false but not both.
+\end{definition}
+
+A proposition is so called because it may be a question to be answered,
+a statement of truth or falsehood, or a claim to be proved or disproved
+depending on the context.
+
+Propositional variables may be combined to form more complex propositions with
+logical operators. The most common and familiar logical operators are \textbf{and}, \textbf{or},
+and \textbf{not}. These operators have special symbols as delineated in the
+following table:
+\begin{table}[H]
+  \centering
+  \begin{tabular}{cc}
+    \toprule
+    Logical Operator & Symbol \\
+    \midrule
+    and & \( \land \) \\
+    or & \( \lor \) \\
+    not & \( \lnot \) \\
+    \bottomrule
+  \end{tabular}
+  \caption{Logical Operators and Symbols}
+\end{table}
+
+\begin{definition}{Logical Operator}{logicalOperator}
+  A \textbf{logical operator} is a function \( f: \mathbb{B}^n \to \mathbb{B} \),
+  for \( n \in \mathbb{N} \) and \( n \ge 1 \) that takes one or more propositional variables
+  as input and returns a value in \( \mathbb{B} \).
+\end{definition}
+
+Usually logical operators take only 1 input (unary) or 2 inputs (binary). For such operators,
+there are only 2 or 4 possible inputs, respectively, so typically such operators are
+tabulated in a \emph{truth table}. The following truth tables define the "and", "or"
+and "not" logical operators, respectively.
+\begin{table}[H]
+  \centering
+  \begin{tabular}{cc}
+    \toprule
+   \(P\) & \( \lnot P \)  \\
+    \midrule
+    True & False \\
+    False & True \\
+    \bottomrule
+  \end{tabular}
+  \caption{Truth Table for "not"}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ccc}
+    \toprule
+    \(P\) & \(Q\) & \( P \land Q \)  \\
+    \midrule
+    True & True & True \\
+    True & False & False \\
+    False & True & False \\
+    False & False & False \\
+    \bottomrule
+  \end{tabular}
+  \caption{Truth Table for "and"}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ccc}
+    \toprule
+    \(P\) & \(Q\) & \( P \lor Q \)  \\
+    \midrule
+    True & True & True \\
+    True & False & True \\
+    False & True & True \\
+    False & False & False \\
+    \bottomrule
+  \end{tabular}
+  \caption{Truth Table for "or"}
+\end{table}
+
+\begin{advancedTopic}
+  While "and" and "or" are by far the most common logical binary operators,
+  there are 16 binary logical operators in total. Some of these are important
+  in digital circuit design and construction. For more information, look up
+  the NAND, NOR, XOR, and XNOR operators or digital logic gates.
+\end{advancedTopic}
+
+Another logical operator of utmost importance is the \textbf{implication} operator,
+which is denoted by the symbol \( \implies \). The proposition \( P \implies Q \),
+means that if \( P \) is true, \( Q \) must also be true. We can define this more precisely
+with a truth table:
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ccc}
+    \toprule
+    \(P\) & \(Q\) & \( P \implies Q \)  \\
+    \midrule
+    True & True & True \\
+    True & False & False \\
+    False & True & True \\
+    False & False & True \\
+    \bottomrule
+  \end{tabular}
+  \caption{Truth Table for "implication"}
+\end{table}
+
+\begin{advancedTopic}
+  The notion that "\( \text{False} \implies \text{True} \) is True" is quite
+  counterintuitive. It seems at odds with the typical meaning of the word "implies" in
+  natural language and philosophical argumentation. This has been the subject of
+  much philosophical discussion. For more information, look up \emph{material
+  implication paradox}.
+\end{advancedTopic}
+
+
+
