@@ -22,7 +22,7 @@ print_usage() {
     echo "  $0 pdf      # Build PDF"
     echo "  $0 all      # Build both PDF and web version"
     echo "  $0 clean    # Clean the output directory"
-} 
+}
 
 docker_run() {
     docker run --rm \
@@ -99,4 +99,9 @@ fi
 if [[ "$WEB" -eq 1 ]]; then
     echo "Building web version..."
     docker_run sh "$BUILD_WEB_SCRIPT"
+fi
+
+if [[ "$PDF" -eq 0 && "$WEB" -eq 0 && "$CLEAN" -eq 0 ]]; then
+    echo "No target specified. Use 'help' for usage information."
+    exit 1
 fi
