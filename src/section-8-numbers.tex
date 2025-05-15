@@ -1,2 +1,102 @@
 \section{Numbers}
-Natural numbers, integers, rational numbers, real numbers, complex numbers
+
+\begin{definition}{Natural Numbers}{naturalNumbers}
+  The \textbf{Natural Numbers} are a set of numbers used for counting a discrete
+  quantity of objects. They are denoted by the symbol \(\mathbb{N}\).
+  \[
+    \mathbb{N} = \{0, 1, 2, 3, \ldots\}
+  \]
+\end{definition}
+
+The Natural Numbers may also be expressed in recursive set builder notation as
+\[
+  \mathbb{N} = \{ 0 \} \cup \{ n + 1 \mid n \in \mathbb{N} \}
+\]
+In other words, we begin with 0 as a natural number, and then each subsequent number
+is formed by adding 1 to a number already in the set. This reflects the idea of
+natural numbers as the basic instrument of counting.
+
+Note that some definitions of the natural numbers exclude zero, defining
+\(\mathbb{N} = \{1, 2, 3, \ldots\}\). Here, we include zero as the smallest natural
+number because we find it useful and intuitive to be able to quantify emptiness
+or nothingness with a natural number.
+
+\begin{definition}{Integers}{integers}
+  The \textbf{Integers} are a set of numbers that include all the natural numbers
+  and, in addition, their negatives.
+  They are denoted by the symbol \(\mathbb{Z}\).
+  \[
+    \mathbb{Z} = \{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}
+  \]
+\end{definition}
+
+The Integers may also be expressed in set builder notation by building on the Natural Numbers
+and adding their negatives to the set:
+\[
+  \mathbb{Z} = \mathbb{N} \cup \{-n \mid n \in \mathbb{N}, n > 0\}
+\]
+
+\begin{definition}{Real Numbers}{realNumbers}
+  The \textbf{Real Numbers}, denoted by \(\mathbb{R}\), are the set of values that can be placed
+  on an infinite, continuous, ordered number line. They include all quantities that represent
+  continuous magnitudes such as length, time, and mass—in contrast to discrete quantities like
+  counts or whole numbers.
+\end{definition}
+
+This definition may seem a bit vague, so let's elaborate on it. An ordered number line is a
+one-dimensional space that extends infinitely in both directions and any number can be
+ordered relative to any other number. For example, if \( a \) and \( b \) are two real numbers,
+then either \(a < b\), \(a = b\), or \(a > b\). A continuous number line means that there are
+no gaps between the numbers. For example, between any two real numbers \( a \) and \( b \), there
+exists another real number \( c \) such that \(a < c < b\).
+
+\begin{definition}{Rational Numbers}{rationalNumbers}
+  The \textbf{Rational Numbers} are the subset of real numbers that can be expressed as the
+  ratio of two integers, where the denominator is not zero. They are denoted by
+  the symbol \(\mathbb{Q}\).
+  \[
+    \mathbb{Q} = \left\{ \frac{a}{b} \,\middle|\, a, b \in \mathbb{Z},\ b \ne 0 \right\}
+  \]
+\end{definition}
+
+Rational numbers are the ordinary decimals and fractions that we encounter in everyday life, and include
+natural numbers and integers. Some examples include:
+\begin{itemize}
+\item \(\frac{1}{2}\)
+\item \(0.5\)
+\item \(-3\)
+\item \(\frac{3}{1}\)
+\item \(2.75\)
+\item \(\frac{11}{4}\)
+\item \(0.3333\ldots\)
+\end{itemize}
+
+Infinitely repeating decimals, such as \(0.3333\ldots\) and \(0.\overline{12345}\), are also rational
+numbers since they can be expressed as the integer ratios \(\frac{1}{3}\) and \(\frac{12345}{99999}\),
+respectively. If the decimal representation of a number never terminates or repeats, then it is
+not a rational number.
+
+\begin{advancedTopic}
+  People are often surprised to learn that \( 0.999\ldots \) is equal to \( 1 \). The proof of this
+  fact is easily understood and well worth reading.
+\end{advancedTopic}
+
+\begin{definition}{Irrational Numbers}{irrationalNumbers}
+  The \textbf{Irrational Numbers} are the subset of numbers that cannot be expressed
+  as the ratio of two integers. They are denoted by the symbol \(\mathbb{R} \setminus \mathbb{Q}\).
+  \[
+    \mathbb{R} \setminus \mathbb{Q} = \left\{ x \,\middle|\, x \in \mathbb{R},\ x \notin \mathbb{Q} \right\}
+  \]
+\end{definition}
+
+Irrational numbers include numbers like \(\sqrt{2}\), \(\pi\), and \( e \), which have been proven to
+have no representation as a ratio of integers. Irrational numbers may be defined conceptually. For
+example, \(\pi\) is defined as the ratio of the circumference of a circle to its diameter. Irrational
+numbers are often handled abstractly through concepts and logic, or approximated numerically by rational numbers.
+
+\begin{advancedTopic}
+  The existence and nature of irrational numbers opens up a wide range of questions to explore. How can we know
+  whether a number defined conceptually is rational or irrational? How can we approximate a given irrational
+  number? Are there any irrational number that cannot be approximated? Which are there more of—rational or
+  irrational numbers?
+\end{advancedTopic}
