@@ -1,12 +1,16 @@
-personal_ws-1.1 en 35 
+personal_ws-1.1 en 46 
 Cardinality
 Irreflexive
+Lenthe
+NAND
 Superset
 TODO
+XNOR
 advancedTopic
 cardinalities
 cardinality
 cartesianProduct
+ccc
 codomain
 colback
 colbacktitle
@@ -18,14 +22,21 @@ emptyset
 fas
 fonttitle
 href
+irrationalNumbers
 irreflexive
 lightblue
 lightbulb
+logicalOperator
+naturalNumbers
 octuple
 powerSet
 pre
 properSubset
 properSuperset
+propositionalVariable
+rationalNumbers
+realNumbers
+relatability
 septuple
 setEquality
 sextuple
