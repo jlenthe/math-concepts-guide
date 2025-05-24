@@ -15,8 +15,12 @@
 \usepackage[most]{tcolorbox}
 \usepackage[margin=1.5in]{geometry}
 
-\definecolor{darkbg}{HTML}{2d3670}
+\definecolor{darkblue}{HTML}{002CAE}
 \definecolor{lightblue}{HTML}{e8ebff}
+\definecolor{darkpurple}{HTML}{A74ABE}
+\definecolor{lightpurple}{HTML}{ece7fe}
+\definecolor{orange}{HTML}{DB7900}
+\definecolor{lightorange}{HTML}{fff5e6}
 
 % Inject FontAwesome CSS for HTML output
 \ifdefined\HCode
@@ -55,17 +59,19 @@
 \tcbuselibrary{theorems}
 \newtcbtheorem[number within=section]{definition}{\iconBookOpen\hspace{0.5em} Definition}%
 {
-  colframe=darkbg,
+  colframe=darkblue,
   colback=lightblue,
-  colbacktitle=darkbg,
+  colbacktitle=darkblue,
   coltitle=white,
   fonttitle=\sffamily\bfseries,
   title filled,
 }{def}
 
 \newtcolorbox{advancedTopic}{
-  colback=gray!10!white,
-  colframe=gray!80!black,
+  colframe=darkpurple,
+  colback=lightpurple,
+  colbacktitle=darkpurple,
+  coltitle=white,
   title=\iconLightbulb\hspace{0.5em} Advanced Topic,
   fonttitle=\sffamily\bfseries,
 }
