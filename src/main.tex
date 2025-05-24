@@ -15,12 +15,12 @@
 \usepackage[most]{tcolorbox}
 \usepackage[margin=1.5in]{geometry}
 
-\definecolor{darkblue}{HTML}{002CAE}
-\definecolor{lightblue}{HTML}{e8ebff}
-\definecolor{darkpurple}{HTML}{A74ABE}
-\definecolor{lightpurple}{HTML}{ece7fe}
-\definecolor{orange}{HTML}{DB7900}
-\definecolor{lightorange}{HTML}{fff5e6}
+\definecolor{darkblue}{HTML}{466C8A}
+\definecolor{lightblue}{HTML}{F5FBFF}
+\definecolor{darkpurple}{HTML}{A1579A}
+\definecolor{lightpurple}{HTML}{FFF5FE}
+\definecolor{warning}{HTML}{AD2C28}
+\definecolor{lightwarning}{HTML}{FFEBEB}
 
 % Inject FontAwesome CSS for HTML output
 \ifdefined\HCode
@@ -77,9 +77,10 @@
 }
 
 \newtcolorbox{warning}{
-  colback=orange!5!white,
-  colframe=orange!90!white,
-  title=\iconExclamationTriangle\hspace{0.5em} Warning,
+  colframe=warning,
+  colback=lightwarning,
+  coltitle=white,
+  title=\iconExclamationTriangle\hspace{0.5em} \textbf{Warning},
   fonttitle=\sffamily\bfseries,
 }
 
