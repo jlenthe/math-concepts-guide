@@ -3,21 +3,38 @@
 \begin{definition}{Set}{set}
   A \textbf{set} is a collection of distinct objects.
 \end{definition}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{1.5in} p{3in}}
+    \toprule
+    \textbf{Set} & \textbf{Description} \\
+    \midrule
+    \( A = \{ 1, 2, 3 \} \) & \( A \) is the set of numbers 1, 2, and 3. \\
+    \( B = \{ x, y, z \} \) & \( B \) is the set of variables \(x\), \(y\), and \(z\). \\
+    \( C = \{ \text{Apple}, \text{Orange} \} \) & \( C \) is the set of words Apple and Orange. \\
+    \bottomrule
+  \end{tabular}
+  \caption{Basic Examples of Sets}
+\end{table}
 
-Finite sets may have all their elements enumerated in curly braces, such as:
-\begin{align*}
-  A &= \{ 1, 2, 3 \} \\
-  B &= \{ x, y, z \} \\
-  C &= \{ \text{Apple}, \text{Orange} \}
-\end{align*}
+Sets have many practical uses. Often a set is used to specify a group from which
+an object can be chosen, such as a restaurant menu or a product catalog. Sets can
+group together related objects, such as the items on a sales receipt.
+Sets can also be used to represent entire types of mathematical objects such as
+numbers, lines, or polygons.
 
-Some key points about sets:
+Some key points to know about sets include:
 \begin{itemize}
-  \item Sets may not have duplicate elements. This is what is meant by
-  \emph{distinct objects}.
+  \item Sets may not have duplicate elements. So \( \{ 1, 1, 2 \} \) is not a set
+     as such, but essentially just the set \( \{ 1, 2 \} \).
+   This is what is meant when we say \emph{distinct objects}.
   \item Sets may contain objects of any type including numbers, strings, or other sets
-   or contain objects of different types.
+   or contain objects of different types. So \( \{ 1, \text{Apple}, \{ 1, 2, 3\} \} \) is a valid set.
   \item Sets may have any number of elements including zero elements or be infinite.
+  \item Sets are not inherently ordered. So \( \{ 1, 2, 3 \} \) is the same set as \( \{ 3, 2, 1 \} \).
+   It is possible to impose an order on a set, but an ordering is separate from the set itself.
+  \item A set cannot contain itself as an element. A statement such as \( A = \{ A \} \)
+    is invalid since it creates a paradox.
 \end{itemize}
 
 \begin{definition}{Empty Set}{emptyset}
@@ -25,31 +42,48 @@ Some key points about sets:
   and is denoted by \( \emptyset \) or \( \{ \} \).
 \end{definition}
 
+The empty set is an important and powerful concept. It gives us a precise way to say
+things like "there is no one on our team with a birthday in March" or "there are no
+solutions to this equation".
+
 \begin{definition}{Cardinality}{cardinality}
   The \textbf{cardinality} of a finite set is the number of elements in the set and is
   denoted by \( |A| \) where \( A \) is the set. The cardinality of the empty
-  set is zero, \( |\emptyset| = 0 \). The cardinality of an infinite set is simply said to be
-  infinite.
+  set is zero, \( |\emptyset| = 0 \). The cardinality of an infinite set is simply said
+  to be infinite.
 \end{definition}
 
-Cardinality examples:
-\begin{itemize}
-  \item \( A = \{ 1, 2, 3 \} \), then \( |A| = 3 \).
-  \item \( B = \{ x, y, z \} \), then \( |B| = 3 \).
-  \item \( C = \{ \text{Apple}, \text{Orange} \} \), then \( |C| = 2 \).
-  \item \( D = \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \} \), then \( |D| = 10 \).
-  \item \( E \) is the set of all even integers, then \( |E| \) is infinite.
-\end{itemize}
+Cardinality is useful because it allows us to quantify and compare the size of sets. It
+gives us a precise way to express things like "I bought 20 items at the grocery store
+last week whereas this week I only bought 15 items". And the concept of cardinality
+fully applies to sets that are unbounded or infinite in size as well.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{2in} p{1in} p{2in}}
+    \toprule
+    \textbf{Set} & \textbf{Cardinality} & \textbf{Description} \\
+    \midrule
+    \( A = \{ 1, 2, 3 \} \) & \( |A| = 3 \) & The cardinality of set \(A\) is 3. \\
+    \( B = \{ w. x, y, z \} \) & \( |B| = 4 \) & The cardinality of set \(B\) is 4. \\
+    \( C = \{ \text{Apple}, \text{Orange} \} \) & \( |C| = 2 \) & The cardinality of set \(C\) is 2. \\
+    \( D = \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \} \) & \( |D| = 10 \) & The cardinality of set \(D\) is 10. \\
+    \( E \) is the set of all even integers & \( |E| \) is infinite & The cardinality of set \(E\) is infinite. \\
+    \( F = \{ \{1, 2, 3\}, \{4\}, \emptyset \} \) & \( |F| = 3 \) & Set \(F\) contains three elements, each of which is itself a set. \\
+    \bottomrule
+  \end{tabular}
+  \caption{Examples of Set Cardinality}
+\end{table}
 
 \begin{advancedTopic}
-  Infinite sets do not all have the same cardinality. Infinite sets have different cardinalities
+  Infinite sets do not all have the same cardinality—there are different infinite cardinalities
   that can be distinguished. For simplicity here, though, we just refer to infinite sets. For more
   information, look up the topic of \emph{transfinite cardinals}.
 \end{advancedTopic}
 
-
-Sets of numbers, such as the real numbers and integers, are commonly referred to and have
-their own symbols as shown in the follow table.
+Sets of numbers, such as the real numbers and integers, are commonly referenced and are
+designated with special symbols as shown in the follow table. These number sets are defined in section
+\ref{sec:numbers}.
 \begin{table}[H]
   \centering
   \begin{tabular}{p{1in} p{2in}}
@@ -66,13 +100,27 @@ their own symbols as shown in the follow table.
   \caption{Symbols for Common Sets of Numbers}
 \end{table}
 
-\begin{definition}{Membership}{membership}
+\begin{definition}{Set Membership}{membership}
   The symbol \( \in \) is used to assert that an element is a member of a set.
   The symbol \( \notin \) is used to assert that an element is not a member of a set.
 \end{definition}
 
-For example, if \( A = \{ 1, 2, 3 \} \) then \( 1 \in A \) and \( 4 \notin A \) are both
-true assertions. We may also say and \( 4 \in A \) is a false statement.
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{1.5in} p{2in}}
+    \toprule
+    \textbf{Set} & \textbf{Examples of True Assertions} \\
+    \midrule
+    \( A = \{ 1, 2, 3 \} \) & \( 1 \in A \), \( 4 \notin A \) \\
+    \( B = \{ x, y, z \} \) & \( x \in B \), \( a \notin B \) \\
+    \( C = \{ \text{Apple}, \text{Orange} \} \) & \( \text{Apple} \in C \), \( \text{Banana} \notin C \) \\
+    \( D = \emptyset \) & \( 0 \notin D \), \( x \notin D \) for all \(x \in \mathbb{R} \) \\
+    \( E = \{ 2, 4, 6, 8 \} \) & \( 4 \in E \), \( 5 \notin E \) \\
+    \( F = \{ \{1, 2\}, \{3\}, \emptyset \} \) & \( \{1, 2\} \in F \), \( \emptyset \in F \), \( 2 \notin F \) \\
+    \bottomrule
+  \end{tabular}
+  \caption{Set Membership Examples}
+\end{table}
 
 \begin{definition}{Set Builder Notation}{set-builder-notation}
   Sets expressed or defined by \textbf{set builder notation} are sets that are defined by
@@ -80,26 +128,86 @@ true assertions. We may also say and \( 4 \in A \) is a false statement.
   \[
     A = \{ x \in S \mid P(x) \}
   \]
-  where \( S \) is a set and \( P(x) \) is a property of the elements of \( S \).
+  where \( S \) is a set and \( P(x) \) is a property that must hold true for \( x \) to be
+  an element of \( A \). The vertical bar \( | \) is typically read as "such that".
 \end{definition}
 
-Sets may be defined by the properties of their elements and may be infinite. For example,
-\[
-  D = \{ x \in \mathbb{R} \mid x > 10 \}
-\]
-means that \( D \) is the set of all real numbers \( x \) such that \( x \) is greater than 10.
-\begin{align*}
-  E &= \{ n \in \mathbb{Z} \mid n \text{ is even} \} \\
-  F &= \{ x \in \mathbb{N} \mid x^2 < 10 \} \\
-  G &= \{ x \in \mathbb{R} \mid x^2 - 25 = 0 \}
-\end{align*}
-\( E \) is the set of all even integers and is an infinite set. \( F \) is the set all natural
-numbers who square is less than 10 (\( F \) could also be expressed as \( F = \{ 1, 2, 3 \} \)).
-\( G \) is the set of all real numbers, \( x \), that satisfy the equation \( x^2 - 25 = 0 \).
-\( G \) happens to be a finite set with two elements, \( G = \{ 5, -5 \} \).
+Set builder notation gives us a powerful way to define sets. With set builder notation, we can
+define sets using the properties that all members of the set must satisfy. This eliminates the
+need to enumerate all the elements of the set exhaustively. Defining a set with set builder
+can result in a set that is finite or infinite in cardinality.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{2in} p{3in}}
+    \toprule
+    \textbf{Set} & \textbf{Description} \\
+    \midrule
+    \( \{ x \in \mathbb{N} \mid x < 5 \} \) & The set of all natural numbers less than 5. \\
+    \( \{ x \in \mathbb{Z} \mid x^2 < 10 \} \) & The set of all integers whose square is less than 10. \\
+    \( \{ x \in \mathbb{Z} \mid x \text{ is even} \} \) & The set of all integers that are even. \\
+    \( \{ x \in \mathbb{R} \mid x^2 - 25 = 0\} \) & The set of all real numbers whose square minus 25 equals zero.\\
+    \( \{ x \in \mathbb{R} \mid x > 0, x < 0\} = \emptyset \) &
+      The set of all real numbers both greather than zero and less than zero, i.e. the empty set.  \\
+    \end{tabular}
+  \caption{Set Builder Notation Examples}
+\end{table}
+
+\begin{definition}{Extended Set Builder Notation}{extended-set-builder-notation}
+  The \textbf{extended set builder notation} is a more general form of set builder notation
+  that allows for more complex expressions to the left of the vertical bar \( | \).
+  It takes the form:
+  \[
+    A = \{ E \mid P_1, P_2, ... \}
+  \]
+
+  where \( E \) is an expression involving one or more variables and \( P_1, P_2, ... \) are
+  one or more properties involving those variables that all must hold true for \( E \) to be an
+  element of \( A \).
+\end{definition}
+
+The extended set builder notation gives us a bit more flexibility in defining sets. It allows us
+to define the members of a set by modifying members of another set and subject to one
+or more properties.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{2in} p{3in}}
+    \toprule
+    \textbf{Set} & \textbf{Description} \\
+    \midrule
+    \( \{ 2^n \mid n \in \mathbb{Z} \} \) & The set of all integer powers of 2. \\
+    \( \{ n^2 \mid n \in \mathbb{Z}, n > 0 \} \) & The set of all positive perfect squares. \\
+    \( \{ x^3 \mid x \in \mathbb{R}, 5 \le x \le 10 \} \) &
+      The set of cubes of all real numbers between 5 and 10. \\
+    \bottomrule
+  \end{tabular}
+  \caption{Extended Set Builder Notation Examples}
+\end{table}
 
 \begin{definition}{Set Equality}{setEquality}
   Two sets \( A \) and \( B \) are equal, denoted by \( A = B \), if and only if
   every element of \( A \) is also an element of \( B \) and every element of \( B \)
   is also an element of \( A \). Sets that are not equal are denoted by \( A \neq B \).
 \end{definition}
+
+Having a precise definition of set equality allows us to describe two sets in different
+ways and determine if they are equal or not.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{2in} p{0.75in} p{2.25in}}
+    \toprule
+    \textbf{Sets} & \textbf{Equality \newline Assertion} & \textbf{Description} \\
+    \midrule
+    \( A = \{ 1, 2, 3 \}, B = \{ 3, 2, 1 \} \) & \( A = B \) & Both sets contain exactly the same elements, order does not matter. \\
+    \( A = \{ 1, 2, 3 \},\ B = \{ 1, 2, 3, 4 \} \) & \( A \neq B \) & \( B \) contains an extra element (4) not in \( A \). \\
+    \( A = \emptyset,\ B = \{ \} \) & \( A = B \) & Both sets are empty, so they are equal. \\
+    \( A = \{ 1, 2, 3 \},\ B = \{ 1, 2, \{3\} \} \) & \( A \neq B \) &
+      \( B \) contains the set \( \{3\} \) as an element, not the number \( 3 \); thus, the sets are not equal. \\
+    \( A = \{ x^2 \mid x \in \{ 2, 3 \} \},\ B = \{ 4, 9 \} \) & \( A = B \) & Both sets contain the same elements: squaring each
+      element of \( \{2, 3\} \) gives \( 4 \) and \( 9 \), so \( A = \{4, 9\} = B \). \\
+    \bottomrule
+  \end{tabular}
+  \caption{Examples of Set Equality}
+\end{table}
