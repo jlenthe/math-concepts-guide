@@ -1,24 +1,45 @@
 \section{Tuples}
 \begin{definition}{Tuple}{tuple}
-  A \textbf{tuple} is an finite ordered list of elements.
+  A \textbf{tuple} is a finite ordered list of elements.
 \end{definition}
 
-Tuples are denoted by parentheses, such as:
-\begin{align*}
-  A &= (1, 2, 3) \\
-  B &= (x, y, z) \\
-  C &= (\text{Apple}, \text{Orange}) \\
-  D &= (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-\end{align*}
+Tuples have many applications. Tuples can represent the coordinates of a point in space,
+the state of a system, or the configuration of a machine. Tuples are also the building
+blocks of other basic mathematical concepts such as relations and functions.
 
-Some key points about tuples:
+A tuple is often denoted using indexed elements, such as:
+\[
+  A = (a_1, \ldots, a_n)
+\]
+where each \( a_i \) is an element of the tuple, indexed by its position.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Tuple} & \textbf{Description} \\
+    \midrule
+    \( A = (1, 2, 3) \) & Tuple with elements \( A_1 = 1 \), \( A_2 = 2 \), and \( A_3 =3 \) \\
+    \( B = (x, y, z) \) & Tuple with elements \( B_1 = x \), \( B_2 = y \), and \( B_3 = z \) \\
+    \( C = (\text{Apple}, \text{Orange}) \) & Tuple with elements \( C_1 = \text{Apple} \), \( C_2 = \text{Orange} \) \\
+    \( D = (7, \{1, 2\}, (a, b)) \) & Tuple with elements \( D_1 = 7 \), \( D_2 = \{1, 2\} \), and \( D_3 = (a, b) \) \\
+    \bottomrule
+  \end{tabular}
+  \caption{Tuple Examples}
+\end{table}
+
+Some key points to know about tuples include:
 \begin{itemize}
-  \item A tuples may have repeated elements. There is no requirement that the elements be distinct.
+  \item A tuple may have repeated elements. There is no requirement that the elements be distinct.
   \item A tuple may have zero elements.
   \item The number of elements in a tuple is called the \textbf{length} of the tuple.
   \item A tuple may contain objects of any type including numbers, strings, sets, or other tuples.
-  \item Tuples of certain lengths have special names (see below).
 \end{itemize}
+
+Tuples of specific lengths may have special names. The following table lists the names of tuples
+of common lengths. Aside from \emph{ordered pair}, the names are not universally accepted and may
+vary by author or context. So it is often best to simply use 4-tuple, 5-tuple, etc. to avoid
+confusion.
 
 \begin{table}[H]
   \centering
@@ -28,8 +49,8 @@ Some key points about tuples:
   \midrule
   0 & empty tuple \\
   1 & singleton, single \\
-  2 & ordered pair \\
-  3 & triple, triplet, triad \\
+  2 & ordered pair, pair \\
+  3 & triple, triplet \\
   4 & quadruple \\
   5 & quintuple \\
   6 & sextuple \\
@@ -41,30 +62,32 @@ Some key points about tuples:
   \caption{Names for Common Tuples}
 \end{table}
 
-Tuple equality is defined as follows:
+\begin{advancedTopic}
+  The concept of tuples has been extended to infinite length. For more
+  information, look up the topic of \emph{Hilbert spaces}.
+\end{advancedTopic}
+
 \begin{definition}{Tuple Equality}{tupleEquality}
   Two tuples \( A \) and \( B \) are equal if and only if they have the same length and
   their corresponding elements are equal.
 \end{definition}
-Tuple equality examples:
-\begin{itemize}
-  \item \( A = (1, 2, 3) \) and \( B = (1, 2, 3) \), then \( A = B \).
-  \item \( A = (1, 2, 3) \) and \( B = (3, 2, 1) \), then \( A \neq B \).
-  \item \( A = (x, y, z) \) and \( B = (x, y, z) \), then \( A = B \).
-  \item \( A = (x, y, z) \) and \( B = (x, z, y) \), then \( A \neq B \).
-  \item \( A = (\text{Apple}, \text{Orange}) \) and \( B = (\text{Apple}, \text{Orange}) \), then \( A = B \).
-  \item \( A = (\text{Apple}, \text{Orange}) \) and \( B = (\text{Orange}, \text{Apple}) \), then \( A \neq B \).
-  \item \( A = (1, 2, 3) \) and \( B = (1, 2) \), then \( A \neq B \).
-\end{itemize}
 
-A tuple may be specified by a sequence of elements with a subscripted index and an ellipsis.
-For example, a tuple with n
-\(n\) elements (\( n \ge 1\)) may be specified as:
-\[
-  A = (a_1, \ldots, a_n)
-\]
+The following table contains examples of comparison of tuples for equality.
 
-\begin{advancedTopic}
-  The tuple concept has been extended to tuples of infinite length. For more
-  information, look up the topic of \emph{Hilbert spaces}.
-\end{advancedTopic}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Tuples} & \textbf{Equality Assertion} \\
+    \midrule
+    \( A = (1, 2, 3),\ B = (1, 2, 3) \) & \( A = B \) \\
+    \( A = (1, 2, 3),\ B = (3, 2, 1) \) & \( A \neq B \) \\
+    \( A = (x, y, z),\ B = (x, y, z) \) & \( A = B \) \\
+    \( A = (\text{Apple}, \text{Orange}),\ B = (\text{Orange}, \text{Apple}) \) & \( A \neq B \) \\
+    \( A = (1, 2, 3),\ B = (1, 2) \) & \( A \neq B \) \\
+    \( A = (\{1, 2\}, \{3\}),\ B = (\{1, 2\}, \{3\}) \) & \( A = B \) \\
+    \( A = (1, \emptyset, \{2\}),\ B = (1, \{\,\}, \{2, 3\}) \) & \( A \neq B \) \\
+    \bottomrule
+  \end{tabular}
+  \caption{Tuple Equality Examples}
+\end{table}
