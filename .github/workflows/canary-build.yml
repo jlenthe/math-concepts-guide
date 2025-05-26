@@ -1,0 +1,46 @@
+name: Canary Build
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest-full
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Ensure Scripts are Executable
+        run: chmod +x scripts/build-pdf.sh scripts/build-web.sh
+
+      # PDF build
+      - name: Build PDF
+        id: pdf
+        run: ./scripts/build-pdf.sh
+
+      # HTML/web build
+      - name: Build Web
+        id: web
+        run: ./scripts/build-web.sh
+
+      # Conditional upload for PDF
+      - name: Upload PDF Artifact
+        if: success() && steps.pdf.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-output
+          path: out/pdf/
+
+      # Conditional upload for HTML
+      - name: Upload HTML Artifact
+        if: success() && steps.web.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-output
+          path: out/html/
