@@ -1,15 +1,73 @@
-\section{Set Operations}
+\section{More on Sets}
+Subsets and supersets describe the relationship between sets when one set is contained in
+another set.
 
-Set operations are ways that two sets can be combined into a new set. The
-foundational set operations are union, intersection, and difference. Union
-combines all the elements from both sets. Intersection results in only the
-elements common to both sets. And difference takes the elements of one
-set away from another set.
+\begin{definition}{Subset}{subset}
+  A set \( A \) is a \textbf{subset} of a set \( B \) if every element of
+  \( A \) is also an element of \( B \).  This is denoted by \( A \subseteq B \).
+\end{definition}
+
+\begin{definition}
+    {Superset}{superset}
+    A set \( A \) is a \textbf{superset} of a set \( B \) if every element of
+    \( B \) is also an element of \( A \). This is denoted by \( A \supseteq B \).
+\end{definition}
+
+Key notes about subsets and supersets:
+\begin{itemize}
+  \item Every set is a subset of itself, \( A \subseteq A \).
+  \item Every set is a superset of itself, \( A \supseteq A \).
+  \item The empty set is a subset of every set, \( \emptyset \subseteq A \).
+  \item Every set is a superset of the empty set, \( A \supseteq \emptyset \).
+\end{itemize}
+
+
+\begin{definition}{Proper Subset}{properSubset}
+  A set \( A \) is a \textbf{proper subset} of a set \( B \) if every element of
+  \( A \) is also an element of \( B \) and \( A \neq B \). This is denoted by
+  \( A \subset B \).
+\end{definition}
+
+\begin{definition}
+    {Proper Superset}{properSuperset}
+    A set \( A \) is a \textbf{proper superset} of a set \( B \) if every element of
+    \( B \) is also an element of \( A \) and \( A \neq B \). This is denoted by
+    \( A \supset B \).
+\end{definition}
+
+When we intuitively think of subsets and supersets, we think of one set being
+fully contained in another set without being the same size as it. That intuition
+corresponds to the concept of \emph{proper} subsets and \emph{proper} supersets,
+since formally a set is a subset and superset of itself.
+
+\begin{definition}{Power Set}{powerSet}
+  The \textbf{power set} of a set \( A \) is the set of all possible subsets of \( A \).
+  This is denoted by \( \mathcal{P}(A) \).
+\end{definition}
+
+Power set examples:
+\begin{itemize}
+  \item \( A = \{ 1, 2 \} \), then \( \mathcal{P}(A) = \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 1, 2 \} \} \).
+  \item \( B = \{ x, y, z \} \), then \( \mathcal{P}(A) = \{ \emptyset, \{ x \}, \{ y \}, \{ z \},
+  \{ x, y \}, \{ x, z \}, \{ y, z \}, \{ x, y, z \} \} \).
+  \item \( C = \{ \text{Apple}, \text{Orange} \} \), then \( \mathcal{P}(A) = \{ \emptyset,
+  \{ \text{Apple} \}, \{ \text{Orange} \}, \{ \text{Apple}, \text{Orange} \} \} \).
+  \item \( D = \{ 1, 2, 3 \} \), then \( \mathcal{P}(A) = \{ \emptyset, \{ 1 \}, \{ 2 \},
+  \{ 3 \}, \{ 1, 2 \}, \{ 1, 3 \}, \{ 2, 3 \}, \{ 1, 2, 3 \} \} \).
+\end{itemize}
+
+The cardinality of the power set of a set \( A \) is \( 2^{|A|} \).
+
+There are several ways that two sets can be combined to form a new set. The
+foundational set operations are union, intersection, and difference.
 
 \begin{definition}{Union}{union}
   The \textbf{union} of two sets \( A \) and \( B \) is the set of all elements
   that are in either \( A \) or \( B \) or both. This is denoted by \( A \cup B \).
 \end{definition}
+
+The set union operation gives us a way to take two sets and combine them into a new
+potentially larger set.
 
 Union examples:
 \begin{itemize}
@@ -26,6 +84,9 @@ Union examples:
   elements that are in both \( A \) and \( B \). This is denoted by \( A \cap B \).
 \end{definition}
 
+The set intersection operation gives us a way to take two sets and identify the elements
+that are common to both sets.
+
 Intersection examples:
 \begin{itemize}
   \item \( A = \{ 1, 2, 3 \} \) and \( B = \{ 3, 4, 5 \} \), then \( A \cap B = \{ 3 \} \).
@@ -40,6 +101,9 @@ Intersection examples:
   The \textbf{difference} of two sets \( A \) and \( B \) is the set of all
   elements that are in \( A \) but not in \( B \). This is denoted by \( A - B \).
 \end{definition}
+
+The set differece operation gives us a way to take the elements of one set away from another set
+leaving only the elements that are unique to the first set.
 
 The following table shows the definition of the set operations using set builder notation.
 \begin{table}[H]
@@ -86,3 +150,4 @@ as
 \[
   \mathbb{R}^2 = \mathbb{R} \times \mathbb{R} = \{ (x, y) \mid x, y \in \mathbb{R} \}
 \].
+
