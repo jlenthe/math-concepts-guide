@@ -13,7 +13,7 @@ another set.
     \( B \) is also an element of \( A \). This is denoted by \( A \supseteq B \).
 \end{definition}
 
-Key notes about subsets and supersets:
+Some key points to know about subsets and supersets include:
 \begin{itemize}
   \item Every set is a subset of itself, \( A \subseteq A \).
   \item Every set is a superset of itself, \( A \supseteq A \).
@@ -45,18 +45,23 @@ since formally a set is a subset and superset of itself.
   This is denoted by \( \mathcal{P}(A) \).
 \end{definition}
 
-Power set examples:
-\begin{itemize}
-  \item \( A = \{ 1, 2 \} \), then \( \mathcal{P}(A) = \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 1, 2 \} \} \).
-  \item \( B = \{ x, y, z \} \), then \( \mathcal{P}(A) = \{ \emptyset, \{ x \}, \{ y \}, \{ z \},
-  \{ x, y \}, \{ x, z \}, \{ y, z \}, \{ x, y, z \} \} \).
-  \item \( C = \{ \text{Apple}, \text{Orange} \} \), then \( \mathcal{P}(A) = \{ \emptyset,
-  \{ \text{Apple} \}, \{ \text{Orange} \}, \{ \text{Apple}, \text{Orange} \} \} \).
-  \item \( D = \{ 1, 2, 3 \} \), then \( \mathcal{P}(A) = \{ \emptyset, \{ 1 \}, \{ 2 \},
-  \{ 3 \}, \{ 1, 2 \}, \{ 1, 3 \}, \{ 2, 3 \}, \{ 1, 2, 3 \} \} \).
-\end{itemize}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{p{1.5in} p{3.5in}}
+    \toprule
+    \textbf{Set} & \textbf{Power Set} \\
+    \midrule
+    \( A = \{ 1, 2 \} \) & \( \mathcal{P}(A) = \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 1, 2 \} \} \) \\
+    \( B = \{ x, y, z \} \) & \( \mathcal{P}(B) = \{ \emptyset, \{ x \}, \{ y \}, \{ z \}, \{ x, y \}, \{ x, z \}, \{ y, z \}, \{ x, y, z \} \} \) \\
+    \( C = \{ \text{Apple}, \text{Orange} \} \) & \( \mathcal{P}(C) = \{ \emptyset, \{ \text{Apple} \}, \{ \text{Orange} \}, \{ \text{Apple}, \text{Orange} \} \} \) \\
+    \( D = \{ 1, 2, 3 \} \) & \( \mathcal{P}(D) = \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 3 \}, \{ 1, 2 \}, \{ 1, 3 \}, \{ 2, 3 \}, \{ 1, 2, 3 \} \} \) \\
+    \bottomrule
+  \end{tabular}
+  \caption{Examples of Power Sets}
+\end{table}
 
-The cardinality of the power set of a set \( A \) is \( 2^{|A|} \).
+The cardinality of the power set of a set \( A \) is \( 2^{|A|} \) so the size of the
+power set grows exponentially with the size of the original set.
 
 There are several ways that two sets can be combined to form a new set. The
 foundational set operations are union, intersection, and difference.
@@ -69,15 +74,20 @@ foundational set operations are union, intersection, and difference.
 The set union operation gives us a way to take two sets and combine them into a new
 potentially larger set.
 
-Union examples:
-\begin{itemize}
-  \item \( A = \{ 1, 2, 3 \} \) and \( B = \{ 3, 4, 5 \} \), then \( A \cup B = \{ 1, 2, 3, 4, 5 \} \).
-  \item \( A = \{ x, y, z \} \) and \( B = \{ a, b, c \} \), then \( A \cup B = \{ x, y, z, a, b, c \} \).
-  \item \( A = \{ \text{Apple}, \text{Orange} \} \) and \( B = \{ \text{Banana}, \text{Grape} \} \), then
-  \( A \cup B = \{ \text{Apple}, \text{Orange}, \text{Banana}, \text{Grape} \} \).
-  \item \( A = \{ x \in \mathbb{R} \mid x < -10 \} \) and \( B = \{ x \in \mathbb{R} \mid x > 10 \} \), then
-  \( A \cup B = \{ x \in \mathbb{R} \mid x < -10 \text{ or } x > 10 \} \).
-\end{itemize}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Sets} & \textbf{Union} \\
+    \midrule
+    \( A = \{ 1, 2, 3 \}, B = \{ 3, 4, 5 \} \) & \( A \cup B = \{ 1, 2, 3, 4, 5 \} \) \\
+    \( A = \{ x, y, z \}, B = \{ a, b, c \} \) & \( A \cup B = \{ x, y, z, a, b, c \} \) \\
+    \( A = \{ \text{Apple}, \text{Orange} \}, B = \{ \text{Kiwi}, \text{Grape} \} \) & \( A \cup B = \{ \text{Apple}, \text{Orange}, \text{Kiwi}, \text{Grape} \} \) \\
+    \( A = \{ x \in \mathbb{R} \mid x < -10 \},\ B = \{ x \in \mathbb{R} \mid x > 10 \} \) & \( A \cup B = \{ x \in \mathbb{R} \mid x < -10 \text{ or } x > 10 \} \) \\
+    \bottomrule
+  \end{tabular}
+  \caption{Examples of Set Union}
+\end{table}
 
 \begin{definition}{Intersection}{intersection}
   The \textbf{intersection} of two sets \( A \) and \( B \) is the set of all
@@ -87,15 +97,20 @@ Union examples:
 The set intersection operation gives us a way to take two sets and identify the elements
 that are common to both sets.
 
-Intersection examples:
-\begin{itemize}
-  \item \( A = \{ 1, 2, 3 \} \) and \( B = \{ 3, 4, 5 \} \), then \( A \cap B = \{ 3 \} \).
-  \item \( A = \{ x, y, z \} \) and \( B = \{ a, b, c \} \), then \( A \cap B = \emptyset \).
-  \item \( A = \{ \text{Apple}, \text{Orange} \} \) and \( B = \{ \text{Banana}, \text{Orange}, \text{Grape} \} \), then
-  \( A \cap B = \{ \text{Orange} \} \).
-  \item \( A = \{ x \in \mathbb{R} \mid x < 10 \} \) and \( B = \{ x \in \mathbb{R} \mid x > 5 \} \), then
-  \( A \cap B = \{ x \in \mathbb{R} \mid 5 < x < 10 \} \).
-\end{itemize}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Sets} & \textbf{Intersection} \\
+    \midrule
+    \( A = \{ 1, 2, 3 \},\ B = \{ 3, 4, 5 \} \) & \( A \cap B = \{ 3 \} \) \\
+    \( A = \{ x, y, z \},\ B = \{ a, b, c \} \) & \( A \cap B = \emptyset \) \\
+    \( A = \{ \text{Apple}, \text{Orange} \},\ B = \{ \text{Banana}, \text{Orange}, \text{Grape} \} \) & \( A \cap B = \{ \text{Orange} \} \) \\
+    \( A = \{ x \in \mathbb{R} \mid x < 10 \},\ B = \{ x \in \mathbb{R} \mid x > 5 \} \) & \( A \cap B = \{ x \in \mathbb{R} \mid 5 < x < 10 \} \) \\
+    \bottomrule
+  \end{tabular}
+  \caption{Examples of Set Intersection}
+\end{table}
 
 \begin{definition}{Difference}{difference}
   The \textbf{difference} of two sets \( A \) and \( B \) is the set of all
@@ -133,21 +148,32 @@ The following table shows the definition of the set operations using set builder
     A^n &= A \times A \times \ldots \times A
   \end{align*}
 \end{definition}
-Cartesian product examples:
-\begin{itemize}
-  \item \( A = \{ 1, 2 \} \) and \( B = \{ 3, 4 \} \), then
-    \( A \times B = \{ (1, 3), (1, 4), (2, 3), (2, 4) \} \).
-  \item \( C = \{ x, y \} \) and \( D = \{ a, b, c \} \),
-    then \( C \times D = \{ (x, a), (x, b), (x, c), (y, a), (y, b), (y, c) \} \).
-  \item \( E = \{ \text{Apple}, \text{Orange} \} \)
-     and \( F = \{ 1, 2 \} \), then \\
-     \( E \times F = \{ (\text{Apple}, 1), (\text{Apple}, 2), (\text{Orange}, 1), (\text{Orange}, 2) \} \).
-  \item \( G = \{ 1, 2 \} \) and \( H = \{ x, y, z \} \), then \( G \times H = \{ (1, x), (1, y), (1, z), (2, x), (2, y), (2, z) \} \).
-\end{itemize}
+
+The Cartesian product gives us a way to take two sets and pair up the elements from each set together.
+It also gives us a simple way to describe a tuple where each element of the tuple is drawn from a
+particular set.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Sets} & \textbf{Cartesian Product} \\
+    \midrule
+    \( A = \{ 1, 2 \},\ B = \{ 3, 4 \} \) & \( A \times B = \{ (1, 3),\ (1, 4),\ (2, 3),\ (2, 4) \} \) \\
+    \( C = \{ x, y \},\ D = \{ a, b, c \} \) & \( C \times D = \{ (x, a),\ (x, b),\ (x, c),\ (y, a),\ (y, b),\ (y, c) \} \) \\
+    \( E = \{ \text{Apple},\ \text{Kiwi} \},\ F = \{ 1, 2 \} \) & \( E \times F = \{ (\text{Apple}, 1),\ (\text{Apple}, 2),\ (\text{Kiwi}, 1),\ (\text{Kiwi}, 2) \} \) \\
+    \( G = \{ 1, 2 \},\ H = \{ x, y, z \} \) & \( G \times H = \{ (1, x),\ (1, y),\ (1, z),\ (2, x),\ (2, y),\ (2, z) \} \) \\
+    \bottomrule
+  \end{tabular}
+  \caption{Examples of Cartesian Products}
+\end{table}
 
 Looking at a common Cartesian product, \( \mathbb{R}^2 \), we can precisely describe it
 as
 \[
   \mathbb{R}^2 = \mathbb{R} \times \mathbb{R} = \{ (x, y) \mid x, y \in \mathbb{R} \}
-\].
+\]
+\noindent It represents all ordered pairs of real numbers and is useful for identifying points
+in a two-dimensional space. Similarly, \( \mathbb{R}^3 \) identifies all points in a
+three-dimensional space.
 
