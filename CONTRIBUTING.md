@@ -10,14 +10,14 @@ improvements.
 
 To build using docker images, you will need:
 
-- Docker
+- Docker or Podman
 - Bash
 
-### Building in a Docker Container
+### Building in a Container
 
-We recommend building with docker on a UNIX-like system since this
-easily allows for a consistent and reproducible build environment as
-well as easy access to the latest version of LaTeX and its supporting
+We recommend building with docker or podman on a UNIX-like system since 
+this easily allows for a consistent and reproducible build environment 
+as well as easy access to the latest version of LaTeX and its supporting
 tools and packages.
 
 To build the PDF file in a docker container:

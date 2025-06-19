@@ -24,13 +24,25 @@ print_usage() {
     echo "  $0 clean    # Clean the output directory"
 }
 
-docker_run() {
-    docker run --rm \
-      --user "$(id -u):$(id -g)" \
-      -v "$(pwd)":/workdir \
-      -w /workdir \
-      "$TEXLIVE_IMAGE" \
-      "$@"
+container_run() {
+    if [[ "$CONTAINER_EXEC" == "podman" ]]; then
+        $CONTAINER_EXEC run --rm \
+            --userns keep-id \
+            -v "$(pwd)":/workdir:Z \
+            -w /workdir \
+            "$TEXLIVE_IMAGE" \
+            "$@"
+    elif [[ "$CONTAINER_EXEC" == "docker" ]]; then
+        $CONTAINER_EXEC run --rm \
+            --user "$(id -u):$(id -g)" \
+            -v "$(pwd)":/workdir \
+            -w /workdir \
+            "$TEXLIVE_IMAGE" \
+            "$@"
+    else
+        echo "Unsupported container execution method: $CONTAINER_EXEC"
+        exit 1
+    fi
 }
 
 # Parse arguments
@@ -63,9 +75,13 @@ while [[ "$#" -gt 0 ]]; do
     shift
 done
 
-# Check for docker
-if ! command -v docker &> /dev/null; then
-    echo "Docker is not installed. Please install Docker to use this script."
+# Check for docker or podman
+if command -v podman &> /dev/null; then
+    CONTAINER_EXEC="podman"
+elif command -v docker &> /dev/null; then
+    CONTAINER_EXEC="docker"
+else
+    echo "Neither podman nor docker is installed. Please install one of them to use this script."
     exit 1
 fi
 
@@ -92,13 +108,13 @@ fi
 # PDF build
 if [[ "$PDF" -eq 1 ]]; then
     echo "Building PDF..."
-    docker_run sh "$BUILD_PDF_SCRIPT"
+    container_run sh "$BUILD_PDF_SCRIPT"
 fi
 
 # Web build
 if [[ "$WEB" -eq 1 ]]; then
     echo "Building web version..."
-    docker_run sh "$BUILD_WEB_SCRIPT"
+    container_run sh "$BUILD_WEB_SCRIPT"
 fi
 
 if [[ "$PDF" -eq 0 && "$WEB" -eq 0 && "$CLEAN" -eq 0 ]]; then
