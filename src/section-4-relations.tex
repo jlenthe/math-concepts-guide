@@ -8,67 +8,85 @@ are related to each other. For example, comparisons of numbers such as
   Cartesian product \( A \times B \).
 \end{definition}
 
-Relation examples:
+A relation gives a way to express how elements of one set are related to
+each other (or not). The most commonly used relations are the standard
+comparison operators such as \(<\), \(>\) and \(=\) for numbers. But
+relations may also be defined for any kind of object. For example, in genealogy
+we might define a set of people, \( \mathbb{P} \), representing some
+population. Then we can define a relation for a concept such as
+\textit{is ancestor of} and even define that formally using set builder
+notation. We might introduce a symbol for this relation such as \( \prec \).
+Then we can make expressions like
+\[
+  a \prec b \prec c
+\]
+\noindent
+to express specific genealogical relationships unambiguously. Other
+similar genealogical relations such as \textit{is a descendant of} or
+\textit{is sibling of} can similarly be defined.
+
+Many such real-world relationships among objects can be modeled using
+mathematical relations. Some examples include:
 \begin{itemize}
-  \item The less-than relation on \( \mathbb{R} \) may be defined as:
-    \[
-      \{ (x, y) \in \mathbb{R} \times \mathbb{R} \mid x < y \}
-    \]
-  \item The integer-squared relation on \( \mathbb{Z} \) may be defined as:
-    \[
-      \{ (x, y) \in \mathbb{Z} \times \mathbb{Z} \mid y = x^2 \}
-    \]
-  \item The natural square-root relation is a relation from \( \mathbb{N} \) to \( \mathbb{R} \)
-  (i.e. a subset of \( \mathbb{N} \times \mathbb{R} \)) and may be defined as:
-    \[
-      \{ (x, y) \in \mathbb{N} \times \mathbb{R} \mid y = +\sqrt{x} \}
-    \]
+  \item Social networks: \textit{follows}, \textit{is friends with}
+    \item Business and economic relationships: \textit{is supplier of},
+      \textit{is customer of}, \textit{is subsidiary of}
+    \item Species predation: \textit{preys on}, \textit{is preyed on by}
 \end{itemize}
 
-Relations often have special properties that are useful to identify.
+Relations often have special properties that are useful to identify. This
+section will define the most commonly used of these.
 
 \begin{definition}{Reflexive}{reflexive}
-  A relation \( R \) on set \( A \) is \textbf{reflexive} if for all \( a \in A \), \( (a, a) \in R \).
+  A relation \( R \) on set \( A \) is \textbf{reflexive} if for all
+  \( a \in A \), \( (a, a) \in R \).
 \end{definition}
 
 \begin{definition}{Irreflexive}{irreflexive}
-  A relation \( R \) on set \( A \) is \textbf{irreflexive} if for all \( a \in A \), \( (a, a) \notin R \).
+  A relation \( R \) on set \( A \) is \textbf{irreflexive} if for all
+  \( a \in A \), \( (a, a) \notin R \).
 \end{definition}
 
-A reflexive relation is one where every element is related to itself. An irreflexive relation is one where
-no element is related to itself. A relation that is neither reflexive nor irreflexive has some elements
-that are related to themselves and some that are not.
+A reflexive relation is one where every element is related to itself. An
+irreflexive relation is one where no element is related to itself. A relation
+that is neither reflexive nor irreflexive has some elements that are related
+to themselves and some that are not.
 
 \begin{definition}{Symmetric}{symmetric}
-  A relation \( R \) on set \( A \) is \textbf{symmetric} if for all \( a, b \in A \), if \( (a, b) \in R \) then
-  \( (b, a) \in R \).
+  A relation \( R \) on set \( A \) is \textbf{symmetric} if for all
+  \( a, b \in A \), if \( (a, b) \in R \) then \( (b, a) \in R \).
 \end{definition}
 
-A symmetric relation is one where the relation has no sense of direction. It indicates that two elements are
-intrinsically mutually related to each other in some way.
+A symmetric relation is one where the relation has no sense of direction. It
+indicates that two elements are intrinsically mutually related to each other
+in some way.
 
 \begin{definition}{Transitive}{transitive}
-  A relation \( R \) on set \( A \) is \textbf{transitive} if for all \( a, b, c \in A \), if \( (a, b) \in R \) and
-  \( (b, c) \in R \) then \( (a, c) \in R \).
+  A relation \( R \) on set \( A \) is \textbf{transitive} if for all
+  \( a, b, c \in A \), if \( (a, b) \in R \) and \( (b, c) \in R \) then
+  \( (a, c) \in R \).
 \end{definition}
 
-A transitive relation implies some kind of overarching structure or relatability among all the elements
-such as the ability to strictly order numbers in a consistent way.
+A transitive relation implies some kind of overarching structure or relatability
+among all the elements such as the ability to strictly order numbers in a
+consistent way.
 
 \begin{definition}{Equivalence Relation}{equivalence-relation}
-  A relation \( R \) is an \textbf{equivalence relation} if it is reflexive, symmetric, and transitive.
+  A relation \( R \) is an \textbf{equivalence relation} if it is reflexive,
+  symmetric, and transitive.
 \end{definition}
 
-An equivalence relation, as defined above, specifies the properties a relation must have to embody
-the general concept of "equivalence", but it does not specify the full meaning of a particular
-equivalence. Multiple equivalence relations can be defined on the same set with different meanings.
-For example, on the set of natural numbers \( \mathbb{N} \), we can define equivalence relations based
-on numeric quantity, parity (even or odd), or divisibility. All such relations would have the properties
-of reflexivity, symmetry, and transitivity.
+An equivalence relation, as defined above, specifies the properties a relation
+must have to embody the general concept of "equivalence", but it does not
+specify the full meaning of a particular equivalence. Multiple equivalence relations
+can be defined on the same set with different meanings. For example, on the set of
+natural numbers \( \mathbb{N} \), we can define equivalence relations based on
+numeric quantity, parity (even or odd), or divisibility. All such relations would
+have the properties of reflexivity, symmetry, and transitivity.
 
 For example, we could define an equivalence relation on \( \mathbb{N} \) that corresponds
-to normal numerical equality, but we could also define parity equality as an equivalence relation where two
-natural numbers are "equivalent" if they are both even or both odd.
+to normal numerical equality, but we could also define parity equality as an equivalence
+relation where two natural numbers are "equivalent" if they are both even or both odd.
 
 \begin{table}[H]
   \centering
@@ -86,4 +104,3 @@ natural numbers are "equivalent" if they are both even or both odd.
   \end{tabular}
   \caption{Properties of Number Comparisons}
 \end{table}
-
