@@ -1,5 +1,8 @@
-personal_ws-1.1 en 46 
+personal_ws-1.1 en 56 
 Cardinality
+FBFF
+FFEBEB
+FFF
 Irreflexive
 Lenthe
 NAND
@@ -17,6 +20,8 @@ colbacktitle
 colframe
 coltitle
 darkbg
+darkblue
+darkpurple
 ebff
 emptyset
 fas
@@ -26,11 +31,15 @@ irrationalNumbers
 irreflexive
 lightblue
 lightbulb
+lightpurple
+lightwarning
 logicalOperator
 naturalNumbers
 octuple
+ple
 powerSet
 pre
+predation
 properSubset
 properSuperset
 propositionalVariable
@@ -44,4 +53,5 @@ stylesheet
 subscripted
 superset
 supersets
+tuh
 tupleEquality
