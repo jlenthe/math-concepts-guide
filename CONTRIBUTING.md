@@ -4,7 +4,30 @@ Thank you for your interest in contributing to _The Guide to Basic
 Mathematical Concepts_! We welcome your ideas, suggestions, and
 improvements.
 
-## Getting Started
+## License
+
+This work is licensed under CC BY-NC-SA 4.0. To view a copy of this license,
+visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+By submitting a contribution, you agree that your contribution may be modified
+and redistributed under the terms of the CC BY-NC-SA 4.0 license.
+
+## Reviewing
+
+The easiest way to contribute to the guide is to review it and submit
+suggestions for improvement.
+
+1. Download the latest release from
+   https://github.com/jlenthe/math-concepts-guide/releases
+
+2. Review it.
+
+3. Open an issue on Github (https://github.com/jlenthe/math-concepts-guide/issues)
+   capturing your feedback (note: this requires a github account which can be
+   created for free). Use the "Content Review" issue type and follow the
+   instructions on the template.
+
+## Development
 
 ### Prerequisites
 
@@ -15,8 +38,8 @@ To build using docker images, you will need:
 
 ### Building in a Container
 
-We recommend building with docker or podman on a UNIX-like system since 
-this easily allows for a consistent and reproducible build environment 
+We recommend building with docker or podman on a UNIX-like system since
+this easily allows for a consistent and reproducible build environment
 as well as easy access to the latest version of LaTeX and its supporting
 tools and packages.
 
@@ -75,10 +98,6 @@ to check spelling. The script configures bew words to be added to word-list.txt 
 $ ./scripts/spell-check.sh
 ```
 
-## Submitting Pull Requests
-
-**TODO** - Document how to prepare pull requests.
-
 ## Organizational Style
 
 The intent of this guide is to be different from and complementary to ordinary
@@ -104,14 +123,10 @@ prohibits racist, sexist, homophobic, or otherwise discriminatory behavior.
 
 Please help us maintain a respectful and collaborative space.
 
-## Licensing
+## License
 
 This work is licensed under CC BY-NC-SA 4.0. To view a copy of this license,
 visit https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 By submitting a contribution, you agree that your contribution may be modified
 and redistributed under the terms of the CC BY-NC-SA 4.0 license.
-
-```
-
-```
