@@ -1,9 +1,9 @@
 ---
-name: Document Review
+name: Content Review
 about: Submit a review of the Math Concepts Guide document
 title: "[REVIEW] "
 labels: ["review", "documentation"]
-assignees: []
+assignees: [jlenthe]
 ---
 
 ## Document Review
@@ -12,22 +12,22 @@ Thank you for taking the time to review the Math Concepts Guide! Your feedback i
 **Before submitting your review, please take a moment to read the README.md file to familiarize yourself with the project's goals, scope, and intended audience. This will help ensure that your feedback aligns with the project's objectives.**
 
 ### Document Version Information
-**Document Version Reviewed:** (e.g., v0.3.0)
+**Document Version Reviewed:** (e.g., v0.3.0, get from title page)
 
 **Format Reviewed:** (e.g., PDF, Web version)
 
-**Date of Review:**
+**Sections Reviewed:** (e.g. 1, 2, all)
 
 ### Content Accuracy
 Please list any mathematical errors, incorrect definitions, or other factual mistakes you discovered:
 
-- [ ] **Section/Page:**
+- **Section/Page:**
 
   **Issue:**
 
   **Suggested Correction:**
 
-- [ ] **Section/Page:**
+- **Section/Page:**
 
   **Issue:**
 
@@ -38,13 +38,13 @@ Please list any mathematical errors, incorrect definitions, or other factual mis
 ### Content Comprehensibility
 Please identify parts that are confusing, poorly explained, or could benefit from clearer presentation:
 
-- [ ] **Section/Page:**
+- **Section/Page:**
 
   **Issue:**
 
   **Suggestion for Improvement:**
 
-- [ ] **Section/Page:**
+- **Section/Page:**
 
   **Issue:**
 
@@ -56,9 +56,9 @@ Please identify parts that are confusing, poorly explained, or could benefit fro
 Please share any other feedback, such as additional topics that should be covered,
 organizational suggestions, general thoughts, etc.
 
-- [ ] **Description:**
+- **Description:**
 
-- [ ] **Description:**
+- **Description:**
 
 (Add more items as needed)
 
