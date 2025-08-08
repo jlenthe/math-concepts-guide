@@ -7,11 +7,16 @@ assignees: [jlenthe]
 ---
 
 ## Document Review
-Thank you for taking the time to review the Math Concepts Guide! Your feedback is valuable in improving the quality and clarity of this educational resource.
 
-**Before submitting your review, please take a moment to read the README.md file to familiarize yourself with the project's goals, scope, and intended audience. This will help ensure that your feedback aligns with the project's objectives.**
+Thank you for taking the time to review the Math Concepts Guide! Your feedback
+is valuable in improving the quality and clarity of this educational resource.
+
+**Before submitting your review, please take a moment to read the README.md file
+to familiarize yourself with the project's goals, scope, and intended audience.
+This will help ensure that your feedback aligns with the project's objectives.**
 
 ### Document Version Information
+
 **Document Version Reviewed:** (e.g., v0.3.0, get from title page)
 
 **Format Reviewed:** (e.g., PDF, Web version)
@@ -19,7 +24,9 @@ Thank you for taking the time to review the Math Concepts Guide! Your feedback i
 **Sections Reviewed:** (e.g. 1, 2, all)
 
 ### Content Accuracy
-Please list any mathematical errors, incorrect definitions, or other factual mistakes you discovered:
+
+Please list any mathematical errors, incorrect definitions, or other factual
+mistakes you discovered:
 
 - **Section/Page:**
 
@@ -36,7 +43,9 @@ Please list any mathematical errors, incorrect definitions, or other factual mis
 (Add more items as needed)
 
 ### Content Comprehensibility
-Please identify parts that are confusing, poorly explained, or could benefit from clearer presentation:
+
+Please identify parts that are confusing, poorly explained, or could benefit
+from clearer presentation:
 
 - **Section/Page:**
 
@@ -53,6 +62,7 @@ Please identify parts that are confusing, poorly explained, or could benefit fro
 (Add more items as needed)
 
 ### Other Suggested Improvements
+
 Please share any other feedback, such as additional topics that should be covered,
 organizational suggestions, general thoughts, etc.
 
@@ -72,6 +82,7 @@ as you'd like it to be displayed there.
 ---
 
 **Note for Reviewers:**
+
 - Please be as specific as possible when referencing sections, pages, or equations
 - If reviewing a PDF, please include page numbers
 - If reviewing the web version, please include section titles or headings
